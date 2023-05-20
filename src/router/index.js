@@ -1,0 +1,35 @@
+import { createRouter , createWebHashHistory } from "vue-router";
+
+const routes = [
+    {
+        path: '/',
+        redirect: '/discover'
+    },
+    {
+        path: '/discover',
+        name: 'Discover',
+        component: () => import('../views/Discover.vue')
+    },
+    {
+        path: '/playlists',
+        name: 'Playlists',
+        component: () => import('../views/Playlists.vue')
+    },
+    {
+        path: '/songs',
+        name: 'Songs',
+        component: () => import('../views/Songs.vue')
+    },
+    {
+        path: '/mvs',
+        name: "Mvs",
+        component: () => import('../views/Mvs.vue')
+    }
+]
+
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes
+})
+
+export default router

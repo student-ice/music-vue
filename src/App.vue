@@ -1,9 +1,15 @@
 <script setup>
+import Content from "./components/Content.vue";
+import Top from "./components/Top.vue";
 </script>
 
 <template>
-  <div></div>
+  <div id="app">
+      <Top />
+      <Content />
+  </div>
 </template>
 
-<style scoped>
+<style lang="scss">
+@import './assets/base.scss';
 </style>
