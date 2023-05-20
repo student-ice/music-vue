@@ -1,5 +1,11 @@
 <script setup>
+import { reactive } from 'vue'
+import { Search } from '@element-plus/icons-vue'
 
+
+const state = reactive({
+    query: ''
+})
 </script>
 
 <template>
@@ -13,7 +19,13 @@
               <span @click="$router.go(1)" class="iconfont icon-icearrowright"></span>
           </div>
       </div>
-      <div class="right-box"></div>
+      <div class="right-box">
+          <el-input
+                    :prefix-icon="Search"
+                    placeholder="搜索"
+                    v-model.trim="state.query">
+          </el-input>
+      </div>
   </div>
 </template>
 
