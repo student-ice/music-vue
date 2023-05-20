@@ -2,7 +2,6 @@
 import { reactive } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 
-
 const state = reactive({
     query: ''
 })
