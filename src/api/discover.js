@@ -6,3 +6,14 @@ export const getBannerList = () => {
         url: '/banner'
     })
 }
+
+// 获取推荐歌单
+export const getRecommendlist = ({ limit = 10 } = {}) => {
+    return request({
+        url: '/personalized',
+        method: 'get',
+        params: {
+            limit
+        }
+    })
+}
