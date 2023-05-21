@@ -5,16 +5,19 @@ html {
   padding: 0;
   font-weight: 400;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
-  Microsoft YaHei, '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif;
+    Microsoft YaHei, '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   transition: 0.5s;
 }
+
 #app {
   height: 100%;
+
   .top-container {
     height: 60px;
     position: fixed;
@@ -22,30 +25,37 @@ html {
     top: 0;
     left: 0;
   }
+
   .container {
     height: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
   }
 }
+
 .iconfont {
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
 }
+
 ul,
 ol {
   list-style: none;
 }
+
 .top-container {
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
   background-color: #f9f9f9;
   width: 100%;
+
   .left-box {
     display: flex;
+
     // 图标
     .icon-wrapper {
       margin-right: 80px;
@@ -74,10 +84,12 @@ ol {
         }
       }
     }
+
     // 历史管理
     .history-wrapper {
       display: flex;
       align-items: center;
+
       .iconfont {
         width: 35px;
         height: 35px;
@@ -88,26 +100,32 @@ ol {
         border-radius: 50%;
         transition: 0.2s;
         cursor: pointer;
+
         &:first-child {
           margin-right: 10px;
         }
+
         &:hover {
           background-color: #ebebeb;
         }
       }
     }
   }
+
   .right-box {
     display: flex;
     align-items: center;
   }
 }
+
 .container {
   display: flex;
+
   .nav {
     background: #ededed;
     width: 200px;
     height: 100%;
+
     li {
       height: 60px;
       cursor: pointer;
@@ -141,15 +159,18 @@ ol {
       }
     }
   }
+
   .main {
     flex: 1;
     overflow-y: scroll;
     padding: 10px 20px;
-    > div {
+
+    >div {
       max-width: 1100px;
       margin: 0 auto;
     }
   }
+
   .player {
     background: #f1f3f4;
     height: 60px;
@@ -158,43 +179,53 @@ ol {
     left: 0;
     width: 100%;
   }
+
   audio {
     width: 100%;
     border-radius: unset;
     outline: none;
   }
 }
+
 .discover-container {
   .title {
     font-weight: normal;
     margin-bottom: 20px;
     padding-left: 8px;
   }
+
   .el-carousel_container {
     height: 200px;
   }
+
   .el-carousel__item img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
   }
+
   .recommend {
     margin-bottom: 40px;
+
     .items {
       display: flex;
       flex-wrap: wrap;
+
       .item {
         width: 200px;
         margin: 10px;
         position: relative;
         overflow: hidden;
+
         img {
           height: 200px;
           width: 200px;
           border-radius: 5px;
         }
+
         .img-wrap {
           position: relative;
+
           .icon-iceplay {
             position: absolute;
             right: 10px;
@@ -209,14 +240,17 @@ ol {
             justify-content: center;
             background: rgba(255, 255, 255, 0.8);
             opacity: 0;
+
             &::before {
               transform: translateX(3px);
             }
           }
+
           &:hover .icon-iceplay {
             opacity: 1;
           }
         }
+
         .name {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -228,8 +262,10 @@ ol {
       }
     }
   }
+
   .news {
     margin-bottom: 40px;
+
     .items {
       height: 500px;
       display: flex;
@@ -297,8 +333,7 @@ ol {
           padding: 10px;
           font-size: 16px;
 
-          .song-name {
-          }
+          .song-name {}
 
           .singer {
             font-size: 14px;
@@ -308,19 +343,23 @@ ol {
       }
     }
   }
+
   .mvs {
     .items {
       display: flex;
       justify-content: flex-start;
+
       .item {
         width: 250px;
         cursor: pointer;
         margin-left: 10px;
         margin-right: 30px;
+
         .img-wrap {
           width: 100%;
           position: relative;
-          > .icon-play {
+
+          >.icon-play {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -335,17 +374,21 @@ ol {
             justify-content: center;
             background: rgba(255, 255, 255, 0.8);
             opacity: 0;
+
             &::before {
               transform: translateX(3px);
             }
           }
-          &:hover > .icon-iceplay {
+
+          &:hover>.icon-iceplay {
             opacity: 1;
           }
+
           img {
             width: 100%;
             border-radius: 5px;
           }
+
           .num-wrap {
             position: absolute;
             color: white;
@@ -356,6 +399,7 @@ ol {
             font-size: 15px;
             padding-right: 5px;
             padding-top: 2px;
+
             .icon-iceplay {
               font-size: 12px;
               display: flex;
@@ -364,11 +408,13 @@ ol {
             }
           }
         }
+
         .info-wrap {
           .name {
             font-size: 15px;
             margin-bottom: 5px;
           }
+
           .singer {
             font-size: 14px;
             color: #c5c5c5;

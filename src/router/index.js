@@ -1,4 +1,4 @@
-import { createRouter , createWebHashHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
     {
@@ -27,7 +27,7 @@ const routes = [
     },
     {
         path: '/mvs',
-        name: "Mvs",
+        name: 'Mvs',
         component: () => import('../views/Mvs.vue')
     },
     {

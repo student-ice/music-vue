@@ -6,11 +6,7 @@ console.log(route.query.id)
 </script>
 
 <template>
-  <div>
-      歌单详情
-  </div>
+  <div>歌单详情</div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

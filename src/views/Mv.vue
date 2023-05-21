@@ -6,9 +6,7 @@ console.log(route.query.id)
 </script>
 
 <template>
-    <div>MV详情</div>
+  <div>MV详情</div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

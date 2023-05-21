@@ -6,7 +6,7 @@ const request = axios.create({
 
 //添加请求拦截器
 request.interceptors.request.use(
-    function(config) {
+    function (config) {
         // window.console.log(config)
         if (!config.params) {
             config.params = {}
@@ -15,7 +15,7 @@ request.interceptors.request.use(
         //在发送请求之前做某事
         return config
     },
-    function(error) {
+    function (error) {
         //请求错误时做些事
         return Promise.reject(error)
     }
@@ -24,12 +24,12 @@ request.interceptors.request.use(
 // 注册响应拦截器
 // Add a response interceptor
 request.interceptors.response.use(
-    function(response) {
+    function (response) {
         // Any status code that lie within the range of 2xx cause this function to trigger
         // Do something with response data
         return response.data
     },
-    function(error) {
+    function (error) {
         // Any status codes that falls outside the range of 2xx cause this function to trigger
         // Do something with response error
         return Promise.reject(error)
