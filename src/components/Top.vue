@@ -1,10 +1,25 @@
 <script setup>
 import { reactive } from 'vue'
 import { Search } from '@element-plus/icons-vue'
+import { useRouter } from "vue-router";
 
+const router = useRouter()
 const state = reactive({
   query: ''
 })
+
+const toResult = () => {
+    if (!state.query) {
+        return
+    } else {
+        router.push({
+            path: '/result',
+            query: {
+                keywords: state.query
+            }
+        })
+    }
+}
 </script>
 
 <template>
@@ -23,6 +38,7 @@ const state = reactive({
     </div>
     <div class="right-box">
       <el-input
+        @keyup.enter.native="toResult"
         :prefix-icon="Search"
         placeholder="搜索"
         v-model.trim="state.query"

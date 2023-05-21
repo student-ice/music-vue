@@ -34,6 +34,11 @@ const routes = [
         path: '/mv',
         name: 'Mv',
         component: () => import('../views/Mv.vue')
+    },
+    {
+        path: '/result',
+        name: 'Result',
+        component: () => import('../views/Result.vue')
     }
 ]
 

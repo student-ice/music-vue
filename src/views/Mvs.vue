@@ -72,7 +72,6 @@ watchEffect(
         event.key === 'type' ||
         event.key === 'order'
       ) {
-        console.log(`state.${event.key} has been accessed during the effect`)
       }
     }
   }

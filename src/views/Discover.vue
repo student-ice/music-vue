@@ -35,7 +35,6 @@ const getData = async () => {
   state.playList = result_2
   state.newsong = result_3
   state.mv = result_4
-  console.log(state.mv)
 }
 
 onMounted(() => {

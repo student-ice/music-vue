@@ -25,7 +25,7 @@ const getData = () => {
   })
     .then((res) => {
       state.tableData = res.data
-      console.log(state.tableData)
+      //console.log(state.tableData)
     })
     .catch(() => {})
 }
@@ -59,7 +59,7 @@ const playMusic = async (id) => {
   const res = await getSongUrl({
     id: id
   })
-  console.log(res)
+  //console.log(res)
   url.value = res.data[0].url
 }
 </script>
