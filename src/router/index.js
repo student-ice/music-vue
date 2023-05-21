@@ -16,7 +16,7 @@ const routes = [
         component: () => import('../views/Playlists.vue')
     },
     {
-        path: '/playlist/:id',
+        path: '/playlist',
         name: 'Playlist',
         component: () => import('../views/Playlist.vue')
     },
@@ -29,6 +29,11 @@ const routes = [
         path: '/mvs',
         name: "Mvs",
         component: () => import('../views/Mvs.vue')
+    },
+    {
+        path: '/mv',
+        name: 'Mv',
+        component: () => import('../views/Mv.vue')
     }
 ]
 

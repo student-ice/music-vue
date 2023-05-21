@@ -5,8 +5,8 @@ import Top from "./components/Top.vue";
 
 <template>
   <div id="app">
-      <Top />
-      <Content />
+    <Top />
+    <Content />
   </div>
 </template>
 
