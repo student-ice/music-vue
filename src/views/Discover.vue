@@ -8,7 +8,9 @@ import {
   getSongUrl,
   getMv
 } from '../api/discover.js'
+import { useStore } from '../store/index.js'
 
+const store = useStore()
 const router = useRouter()
 const state = reactive({
   //轮播图
@@ -50,7 +52,10 @@ const toPlayList = (_id) => {
 }
 
 const playMusic = async (id) => {
-  console.log(id)
+  const res = await getSongUrl({
+    id: id
+  })
+  store.setUrl(res.data[0].url)
 }
 
 const toMv = (id) => {

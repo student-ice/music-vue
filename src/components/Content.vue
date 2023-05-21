@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+import { useStore } from '../store/index.js'
+import { storeToRefs } from 'pinia'
+
+const store = useStore()
+const { url } = storeToRefs(store)
+
+</script>
 
 <template>
   <div class="container">
@@ -34,7 +41,7 @@
       <router-view />
     </div>
     <div class="player">
-      <audio ref="audioRef" controls autoplay loop></audio>
+      <audio ref="audioRef" :src="url" controls autoplay loop></audio>
     </div>
   </div>
 </template>
