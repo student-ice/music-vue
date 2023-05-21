@@ -7,13 +7,13 @@ export const useStore = defineStore('store', {
         }
     },
     getters: {
-        getUrl(state){
+        getUrl(state) {
             return state.url
         }
     },
     actions: {
-        setUrl(url) {
-            this.state.url = url
+        setUrl(newUrl) {
+            this.state.url = newUrl
         }
     }
 })
