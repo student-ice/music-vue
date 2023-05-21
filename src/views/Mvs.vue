@@ -6,6 +6,9 @@ import { allMvs } from '../api/mvs.js'
 
 const router = useRouter()
 const state = reactive({
+  //歌曲加载失败展示的默认图片
+  defaultImageUrl:
+    'http://81.70.119.233/wp-content/uploads/2023/04/cropped-微信图片_20230329144827.jpg',
   area: '全部',
   type: '全部',
   order: '上升最快',
@@ -38,7 +41,7 @@ const getData = () => {
     if (res.count) {
       state.total = res.count
     }
-    console.log(state.mvList)
+    //console.log(state.mvList)
   })
 }
 
@@ -62,8 +65,6 @@ watchEffect(
   },
   {
     flush: 'sync',
-    deep: true,
-    immediate: true,
     // 监听state中的area, type, order属性
     onTrack: (event) => {
       if (
@@ -76,6 +77,10 @@ watchEffect(
     }
   }
 )
+
+function setDefaultImage(event) {
+  event.target.src = state.defaultImageUrl
+}
 </script>
 
 <template>
@@ -220,7 +225,7 @@ watchEffect(
           @click="toMv(item.id)"
         >
           <div class="img-wrap">
-            <img :src="item.cover" alt />
+            <img :src="item.cover" @error="setDefaultImage" alt />
             <div class="num-wrap">
               <div class="iconfont icon-iceplay"></div>
               <div class="num">{{ formatCount(item.playCount) }}</div>
