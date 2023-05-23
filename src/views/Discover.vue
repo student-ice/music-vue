@@ -9,8 +9,10 @@ import {
   getMv
 } from '../api/discover.js'
 import { useStore } from '../store/index.js'
+import { storeToRefs } from 'pinia'
 
 const store = useStore()
+const { url } = storeToRefs(store)
 const router = useRouter()
 const state = reactive({
   //轮播图
@@ -54,7 +56,7 @@ const playMusic = async (id) => {
   const res = await getSongUrl({
     id: id
   })
-  store.setUrl(res.data[0].url)
+  url.value = res.data[0].url
 }
 
 const toMv = (id) => {
